@@ -1,0 +1,17 @@
+
+import java.util.*;
+
+public class GregorianCalendar {
+    public static void main(String[] args)
+
+    {
+        GregorianCalendar cal = new GregorianCalendar();
+        System.out.println("\nCurrent Date & Time\n" + cal.getTime());
+        cal.add(GregorianCalendar.DATE, 100);
+        GregorianCalendar myBirthday = new GregorianCalendar(1999, Calendar.JANUARY, 10);
+        String[] strDays = new String[]{"Sunday","Monday","Tuesday","Wednesday","Thusday","Friday","Saturday"};
+        System.out.println("\nWeekday of My Birthday\n" + strDays[myBirthday.get(GregorianCalendar.DAY_OF_WEEK)-1]);
+        myBirthday.add(GregorianCalendar.DATE, 10000);
+        System.out.println("\n10,000 Days from my Birthday\n" + myBirthday.getTime());
+    }
+}
